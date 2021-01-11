@@ -1,9 +1,11 @@
 import discord, asyncio, json, random
+import os
 from random import *
 
 client = discord.Client()
 
-token = "Nzk2NzMyOTkzMzQ3NTE4NDk1.X_cNbA._n_8VIiMAMPijoiXWqTcVhTLQlU"
+access_token = os.environ["BOT_TOKEN"]
+token = access_token
 
 person = []
 personmoney = {}
@@ -111,5 +113,4 @@ async def on_message(message):
 
 
 
-
-client.run('Nzk2NzMyOTkzMzQ3NTE4NDk1.X_cNbA._n_8VIiMAMPijoiXWqTcVhTLQlU') 
+client.run(access_token) 
